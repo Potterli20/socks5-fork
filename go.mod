@@ -1,6 +1,6 @@
-module github.com/txthinking/socks5
+module github.com/potterli20/socks5-fork
 
-go 1.16
+go 1.19
 
 require (
 	github.com/patrickmn/go-cache v2.1.0+incompatible

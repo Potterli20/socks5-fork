@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	cache "github.com/patrickmn/go-cache"
+	cache "zgo.at/zcache"
 	"github.com/txthinking/runnergroup"
 )
 

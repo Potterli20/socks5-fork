@@ -7,7 +7,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/txthinking/socks5"
+	"github.com/Potterli20/socks5-fork"
 )
 
 func ExampleServer() {
