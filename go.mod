@@ -1,6 +1,6 @@
 module github.com/Potterli20/socks5-fork
 
-go 1.20
+go 1.21
 
 require (
 	github.com/txthinking/runnergroup v0.0.0-20230325130830-408dc5853f86
