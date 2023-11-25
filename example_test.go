@@ -9,7 +9,6 @@ import (
 
 	"github.com/Potterli20/socks5-fork"
 	"github.com/miekg/dns"
-
 )
 
 func ExampleServer() {
