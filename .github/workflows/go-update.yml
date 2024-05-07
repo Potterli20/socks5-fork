@@ -18,8 +18,10 @@ jobs:
         run: |
           go mod tidy -compat=1.22
           gofmt -w -r 'interface{} -> any' .
+          go mod download
           go get -u
           go mod download
+          
       - name: Git push 
         run: |
           git init
