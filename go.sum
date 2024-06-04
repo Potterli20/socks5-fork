@@ -1,3 +1,5 @@
+github.com/Potterli20/socks5-fork v0.0.0-20240507071102-588de4dd3f86 h1:v+64iilLN5SvHZjEdZqykbP31psLwep3Qcoesqk2pWw=
+github.com/Potterli20/socks5-fork v0.0.0-20240507071102-588de4dd3f86/go.mod h1:EuG7x8j8lHCbOdYgNnTtQJW69NYSZ3sxF5gS/eXannI=
 github.com/miekg/dns v1.1.59 h1:C9EXc/UToRwKLhK5wKU/I4QVsBUc8kE6MkHBkeypWZs=
 github.com/miekg/dns v1.1.59/go.mod h1:nZpewl5p6IvctfgrckopVx2OlSEHPRO/U4SYkRklrEk=
 github.com/txthinking/runnergroup v0.0.0-20230325130830-408dc5853f86 h1:EX/lPhI7pMS0AOXCkKgdo/CCHOtTtTBvdjk7uUWeSYc=
