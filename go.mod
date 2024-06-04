@@ -1,4 +1,4 @@
-module github.com/Potterli20/socks5-fork
+module github.com/potterli20/socks5-fork
 
 go 1.22
 
