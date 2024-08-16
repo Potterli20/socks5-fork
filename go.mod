@@ -1,6 +1,6 @@
 module github.com/Potterli20/socks5-fork
 
-go 1.22
+go 1.23
 
 require (
 	github.com/miekg/dns v1.1.62
