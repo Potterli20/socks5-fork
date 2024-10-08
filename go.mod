@@ -4,7 +4,7 @@ go 1.23
 
 require (
 	github.com/miekg/dns v1.1.62
-	github.com/txthinking/runnergroup v0.0.0-20230325130830-408dc5853f86
+	github.com/txthinking/runnergroup v0.0.0-20241008125326-dc8c0dd74fb3
 	zgo.at/zcache v1.2.0
 )
 
