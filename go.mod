@@ -1,6 +1,8 @@
 module github.com/Potterli20/socks5-fork
 
-go 1.23
+go 1.24
+
+tool golang.org/x/tools/cmd/stringer
 
 require (
 	github.com/miekg/dns v1.1.63
