@@ -6,7 +6,7 @@ tool golang.org/x/tools/cmd/stringer
 
 require (
 	github.com/miekg/dns v1.1.63
-	github.com/txthinking/runnergroup v0.0.0-20241009114647-a2ed56ecb960
+	github.com/txthinking/runnergroup v0.0.0-20241229123329-7b873ad00768
 	zgo.at/zcache v1.2.0
 )
 
