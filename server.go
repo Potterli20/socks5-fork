@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/txthinking/runnergroup"
-	cache "zgo.at/zcache"
+	cache "zgo.at/zcache/v2"
 )
 
 var (
