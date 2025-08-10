@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/txthinking/runnergroup"
-	"github.com/zondax/golem/pkg/zcache"
+	cache "github.com/zondax/golem/pkg/zcache"
 )
 
 var (
@@ -30,12 +30,12 @@ type Server struct {
 	Addr              string
 	ServerAddr        net.Addr
 	UDPConn           *net.UDPConn
-	UDPExchanges      *zcache.Cache
+	UDPExchanges      *cache.Cache
 	TCPTimeout        int
 	UDPTimeout        int
 	Handle            Handler
-	AssociatedUDP     *zcache.Cache
-	UDPSrc            *zcache.Cache
+	AssociatedUDP     *cache.Cache
+	UDPSrc            *cache.Cache
 	RunnerGroup       *runnergroup.RunnerGroup
 	// RFC: [UDP ASSOCIATE] The server MAY use this information to limit access to the association. Default false, no limit.
 	LimitUDP bool
@@ -61,9 +61,9 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 	if username != "" && password != "" {
 		m = MethodUsernamePassword
 	}
-	cs := zcache.NewCache()
-	cs1 := zcache.NewCache()
-	cs2 := zcache.NewCache()
+	cs := cache.NewCache()
+	cs1 := cache.NewCache()
+	cs2 := cache.NewCache()
 	s := &Server{
 		Method:            m,
 		UserName:          username,
