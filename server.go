@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/txthinking/runnergroup"
-	"github.com/zondax/golem/pkg/zcache"
-	"github.com/zondax/golem/pkg/metrics"
 	"github.com/zondax/golem/pkg/logger"
+	"github.com/zondax/golem/pkg/metrics"
+	"github.com/zondax/golem/pkg/zcache"
 )
 
 var (
@@ -70,11 +70,11 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 
 	// 创建本地缓存配置
 	localConfig := &zcache.LocalConfig{
-		NumCounters: 1e7,          // 跟踪的键数量
-		MaxCostMB:   512,          // 最大内存使用量
-		BufferItems: 64,           // Get 缓冲区大小
-		MetricServer: ms,          // 必需的 metrics server
-		Logger: logger.NewLogger(),
+		NumCounters:  1e7, // 跟踪的键数量
+		MaxCostMB:    512, // 最大内存使用量
+		BufferItems:  64,  // Get 缓冲区大小
+		MetricServer: ms,  // 必需的 metrics server
+		Logger:       logger.NewLogger(),
 	}
 
 	// 初始化三个本地缓存实例
@@ -356,7 +356,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 	src := addr.String()
 	var ch chan byte
 	if s.LimitUDP {
-		var chInterface interface{}
+		var chInterface any
 		err := s.AssociatedUDP.Get(context.Background(), src, &chInterface)
 		if err != nil {
 			if s.AssociatedUDP.IsNotFoundError(err) {
@@ -384,7 +384,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 
 	dst := d.Address()
 	var ue *UDPExchange
-	var iue interface{}
+	var iue any
 	err := s.UDPExchanges.Get(context.Background(), src+dst, &iue)
 	if err == nil {
 		ue = iue.(*UDPExchange)
@@ -397,7 +397,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 		log.Printf("Call udp: %#v\n", dst)
 	}
 	var laddr string
-	var laddrInterface interface{}
+	var laddrInterface any
 	err = s.UDPSrc.Get(context.Background(), src+dst, &laddrInterface)
 	if err == nil {
 		laddr = laddrInterface.(string)
