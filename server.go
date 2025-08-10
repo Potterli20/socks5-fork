@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Potterli20/socks5-fork/cache"
 	"github.com/txthinking/runnergroup"
-	"github.com/zondax/golem/pkg/zcache"
 )
 
 var (
@@ -30,12 +30,12 @@ type Server struct {
 	Addr              string
 	ServerAddr        net.Addr
 	UDPConn           *net.UDPConn
-	UDPExchanges      *zcache.Cache
+	UDPExchanges      *cache.Cache
 	TCPTimeout        int
 	UDPTimeout        int
 	Handle            Handler
-	AssociatedUDP     *zcache.Cache
-	UDPSrc            *zcache.Cache
+	AssociatedUDP     *cache.Cache
+	UDPSrc            *cache.Cache
 	RunnerGroup       *runnergroup.RunnerGroup
 	// RFC: [UDP ASSOCIATE] The server MAY use this information to limit access to the association. Default false, no limit.
 	LimitUDP bool
@@ -61,9 +61,9 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 	if username != "" && password != "" {
 		m = MethodUsernamePassword
 	}
-	cs := zcache.New(zcache.NoExpiration, zcache.NoExpiration)
-	cs1 := zcache.New(zcache.NoExpiration, zcache.NoExpiration)
-	cs2 := zcache.New(zcache.NoExpiration, zcache.NoExpiration)
+	cs := cache.New(cache.NoExpiration, cache.NoExpiration)
+	cs1 := cache.New(cache.NoExpiration, cache.NoExpiration)
+	cs2 := cache.New(cache.NoExpiration, cache.NoExpiration)
 	s := &Server{
 		Method:            m,
 		UserName:          username,
