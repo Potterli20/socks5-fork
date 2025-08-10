@@ -30,12 +30,12 @@ type Server struct {
 	Addr              string
 	ServerAddr        net.Addr
 	UDPConn           *net.UDPConn
-	UDPExchanges      *cache.Cache
+	UDPExchanges      *zcache.Cache
 	TCPTimeout        int
 	UDPTimeout        int
 	Handle            Handler
-	AssociatedUDP     *cache.Cache
-	UDPSrc            *cache.Cache
+	AssociatedUDP     *zcache.Cache
+	UDPSrc            *zcache.Cache
 	RunnerGroup       *runnergroup.RunnerGroup
 	// RFC: [UDP ASSOCIATE] The server MAY use this information to limit access to the association. Default false, no limit.
 	LimitUDP bool
