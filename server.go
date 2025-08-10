@@ -1,5 +1,38 @@
-package socks5
+package sock	"github.com/txthinking/runnergroup"
+	"github.com/zonda	// 创建一个空的 metrics server
+	ms := metrics.NewTaskMetrics("", "", "socks5")
 
+	// 创建本地缓存配置
+	localConfig := &zcache.LocalConfig{
+		NumCounters: 1e7,          // 跟踪的键数量
+		MaxCostMB:   512,          // 最大内存使用量
+		BufferItems: 64,           // Get 缓冲区大小
+		MetricServer: ms,          // 必需的 metrics server
+		Logger: logger.NewLogger(),
+	}
+
+	// 初始化三个本地缓存实例
+	cs, err := zcache.NewLocalCache(localConfig)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create UDPExchanges cache: %v", err)
+	}
+
+	cs1, err := zcache.NewLocalCache(localConfig)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create AssociatedUDP cache: %v", err)
+	}
+
+	cs2, err := zcache.NewLocalCache(localConfig)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create UDPSrc cache: %v", err)
+	}
+
+	s := &Server{lem/pkg/zcache"
+	"github.com/zondax/golem/pkg/metrics"
+	"github.com/zondax/golem/pkg/logger"
+)
+
+var (
 import (
 	"errors"
 	"fmt"
@@ -30,12 +63,12 @@ type Server struct {
 	Addr              string
 	ServerAddr        net.Addr
 	UDPConn           *net.UDPConn
-	UDPExchanges      *cache.Cache
+	UDPExchanges      zcache.LocalCache
 	TCPTimeout        int
 	UDPTimeout        int
 	Handle            Handler
-	AssociatedUDP     *cache.Cache
-	UDPSrc            *cache.Cache
+	AssociatedUDP     zcache.LocalCache
+	UDPSrc            zcache.LocalCache
 	RunnerGroup       *runnergroup.RunnerGroup
 	// RFC: [UDP ASSOCIATE] The server MAY use this information to limit access to the association. Default false, no limit.
 	LimitUDP bool
