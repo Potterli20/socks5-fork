@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/txthinking/runnergroup"
-	cache "zgo.at/zcache"
+	"github.com/zondax/golem/pkg/zcache"
 )
 
 var (
@@ -61,9 +61,9 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 	if username != "" && password != "" {
 		m = MethodUsernamePassword
 	}
-	cs := cache.New(cache.NoExpiration, cache.NoExpiration)
-	cs1 := cache.New(cache.NoExpiration, cache.NoExpiration)
-	cs2 := cache.New(cache.NoExpiration, cache.NoExpiration)
+	cs := zcache.NewCache()
+	cs1 := zcache.NewCache()
+	cs2 := zcache.NewCache()
 	s := &Server{
 		Method:            m,
 		UserName:          username,
@@ -308,7 +308,7 @@ func (h *DefaultHandle) TCPHandle(s *Server, c *net.TCPConn, r *Request) error {
 		}
 		ch := make(chan byte)
 		defer close(ch)
-		s.AssociatedUDP.Set(caddr.String(), ch, -1)
+		s.AssociatedUDP.Set(caddr.String(), ch)
 		defer s.AssociatedUDP.Delete(caddr.String())
 		io.Copy(ioutil.Discard, c)
 		if Debug {
@@ -374,7 +374,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 		laddr = ""
 	}
 	if laddr == "" {
-		s.UDPSrc.Set(src+dst, rc.LocalAddr().String(), -1)
+		s.UDPSrc.Set(src+dst, rc.LocalAddr().String())
 	}
 	ue = &UDPExchange{
 		ClientAddr: addr,
@@ -387,7 +387,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 		ue.RemoteConn.Close()
 		return err
 	}
-	s.UDPExchanges.Set(src+dst, ue, -1)
+	s.UDPExchanges.Set(src+dst, ue)
 	go func(ue *UDPExchange, dst string) {
 		defer func() {
 			ue.RemoteConn.Close()
