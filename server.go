@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Potterli20/socks5-fork/cache"
 	"github.com/txthinking/runnergroup"
+	cache "zgo.at/zcache"
 )
 
 var (
