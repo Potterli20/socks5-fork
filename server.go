@@ -1,39 +1,7 @@
-package sock	"github.com/txthinking/runnergroup"
-	"github.com/zonda	// 创建一个空的 metrics server
-	ms := metrics.NewTaskMetrics("", "", "socks5")
+package socks5
 
-	// 创建本地缓存配置
-	localConfig := &zcache.LocalConfig{
-		NumCounters: 1e7,          // 跟踪的键数量
-		MaxCostMB:   512,          // 最大内存使用量
-		BufferItems: 64,           // Get 缓冲区大小
-		MetricServer: ms,          // 必需的 metrics server
-		Logger: logger.NewLogger(),
-	}
-
-	// 初始化三个本地缓存实例
-	cs, err := zcache.NewLocalCache(localConfig)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create UDPExchanges cache: %v", err)
-	}
-
-	cs1, err := zcache.NewLocalCache(localConfig)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create AssociatedUDP cache: %v", err)
-	}
-
-	cs2, err := zcache.NewLocalCache(localConfig)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create UDPSrc cache: %v", err)
-	}
-
-	s := &Server{lem/pkg/zcache"
-	"github.com/zondax/golem/pkg/metrics"
-	"github.com/zondax/golem/pkg/logger"
-)
-
-var (
 import (
+	"context"
 	"errors"
 	"fmt"
 	"io"
@@ -44,7 +12,9 @@ import (
 	"time"
 
 	"github.com/txthinking/runnergroup"
-	cache "github.com/zondax/golem/pkg/zcache"
+	"github.com/zondax/golem/pkg/zcache"
+	"github.com/zondax/golem/pkg/metrics"
+	"github.com/zondax/golem/pkg/logger"
 )
 
 var (
@@ -94,9 +64,35 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 	if username != "" && password != "" {
 		m = MethodUsernamePassword
 	}
-	cs := cache.NewCache()
-	cs1 := cache.NewCache()
-	cs2 := cache.NewCache()
+
+	// 创建一个空的 metrics server
+	ms := metrics.NewTaskMetrics("", "", "socks5")
+
+	// 创建本地缓存配置
+	localConfig := &zcache.LocalConfig{
+		NumCounters: 1e7,          // 跟踪的键数量
+		MaxCostMB:   512,          // 最大内存使用量
+		BufferItems: 64,           // Get 缓冲区大小
+		MetricServer: ms,          // 必需的 metrics server
+		Logger: logger.NewLogger(),
+	}
+
+	// 初始化三个本地缓存实例
+	cs, err := zcache.NewLocalCache(localConfig)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create UDPExchanges cache: %v", err)
+	}
+
+	cs1, err := zcache.NewLocalCache(localConfig)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create AssociatedUDP cache: %v", err)
+	}
+
+	cs2, err := zcache.NewLocalCache(localConfig)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create UDPSrc cache: %v", err)
+	}
+
 	s := &Server{
 		Method:            m,
 		UserName:          username,
@@ -341,8 +337,11 @@ func (h *DefaultHandle) TCPHandle(s *Server, c *net.TCPConn, r *Request) error {
 		}
 		ch := make(chan byte)
 		defer close(ch)
-		s.AssociatedUDP.Set(caddr.String(), ch)
-		defer s.AssociatedUDP.Delete(caddr.String())
+		err = s.AssociatedUDP.Set(context.Background(), caddr.String(), ch, 24*time.Hour)
+		if err != nil {
+			return fmt.Errorf("failed to set AssociatedUDP cache: %v", err)
+		}
+		defer s.AssociatedUDP.Delete(context.Background(), caddr.String())
 		io.Copy(ioutil.Discard, c)
 		if Debug {
 			log.Printf("A tcp connection that udp %#v associated closed\n", caddr.String())
@@ -357,11 +356,15 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 	src := addr.String()
 	var ch chan byte
 	if s.LimitUDP {
-		any, ok := s.AssociatedUDP.Get(src)
-		if !ok {
-			return fmt.Errorf("This udp address %s is not associated with tcp", src)
+		var chInterface interface{}
+		err := s.AssociatedUDP.Get(context.Background(), src, &chInterface)
+		if err != nil {
+			if s.AssociatedUDP.IsNotFoundError(err) {
+				return fmt.Errorf("This udp address %s is not associated with tcp", src)
+			}
+			return fmt.Errorf("failed to get from AssociatedUDP cache: %v", err)
 		}
-		ch = any.(chan byte)
+		ch = chInterface.(chan byte)
 	}
 	send := func(ue *UDPExchange, data []byte) error {
 		select {
@@ -381,19 +384,25 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 
 	dst := d.Address()
 	var ue *UDPExchange
-	iue, ok := s.UDPExchanges.Get(src + dst)
-	if ok {
+	var iue interface{}
+	err := s.UDPExchanges.Get(context.Background(), src+dst, &iue)
+	if err == nil {
 		ue = iue.(*UDPExchange)
 		return send(ue, d.Data)
+	} else if !s.UDPExchanges.IsNotFoundError(err) {
+		return fmt.Errorf("failed to get from UDPExchanges cache: %v", err)
 	}
 
 	if Debug {
 		log.Printf("Call udp: %#v\n", dst)
 	}
 	var laddr string
-	any, ok := s.UDPSrc.Get(src + dst)
-	if ok {
-		laddr = any.(string)
+	var laddrInterface interface{}
+	err = s.UDPSrc.Get(context.Background(), src+dst, &laddrInterface)
+	if err == nil {
+		laddr = laddrInterface.(string)
+	} else if !s.UDPSrc.IsNotFoundError(err) {
+		return fmt.Errorf("failed to get from UDPSrc cache: %v", err)
 	}
 	rc, err := DialUDP("udp", laddr, dst)
 	if err != nil {
@@ -407,7 +416,10 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 		laddr = ""
 	}
 	if laddr == "" {
-		s.UDPSrc.Set(src+dst, rc.LocalAddr().String())
+		err = s.UDPSrc.Set(context.Background(), src+dst, rc.LocalAddr().String(), 24*time.Hour)
+		if err != nil {
+			return fmt.Errorf("failed to set UDPSrc cache: %v", err)
+		}
 	}
 	ue = &UDPExchange{
 		ClientAddr: addr,
@@ -420,11 +432,16 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 		ue.RemoteConn.Close()
 		return err
 	}
-	s.UDPExchanges.Set(src+dst, ue)
+	err = s.UDPExchanges.Set(context.Background(), src+dst, ue, 24*time.Hour)
+	if err != nil {
+		return fmt.Errorf("failed to set UDPExchanges cache: %v", err)
+	}
 	go func(ue *UDPExchange, dst string) {
 		defer func() {
 			ue.RemoteConn.Close()
-			s.UDPExchanges.Delete(ue.ClientAddr.String() + dst)
+			if err := s.UDPExchanges.Delete(context.Background(), ue.ClientAddr.String()+dst); err != nil {
+				log.Printf("failed to delete from UDPExchanges cache: %v", err)
+			}
 		}()
 		var b [65507]byte
 		for {
