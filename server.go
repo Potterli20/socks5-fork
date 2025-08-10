@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/txthinking/runnergroup"
-	cache "github.com/zondax/golem/pkg/zcache"
+	"github.com/zondax/golem/pkg/zcache"
 )
 
 var (
@@ -30,12 +30,12 @@ type Server struct {
 	Addr              string
 	ServerAddr        net.Addr
 	UDPConn           *net.UDPConn
-	UDPExchanges      *cache.Cache
+	UDPExchanges      *zcache.Cache
 	TCPTimeout        int
 	UDPTimeout        int
 	Handle            Handler
-	AssociatedUDP     *cache.Cache
-	UDPSrc            *cache.Cache
+	AssociatedUDP     *zcache.Cache
+	UDPSrc            *zcache.Cache
 	RunnerGroup       *runnergroup.RunnerGroup
 	// RFC: [UDP ASSOCIATE] The server MAY use this information to limit access to the association. Default false, no limit.
 	LimitUDP bool
@@ -61,9 +61,9 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 	if username != "" && password != "" {
 		m = MethodUsernamePassword
 	}
-	cs := cache.New(cache.NoExpiration, cache.NoExpiration)
-	cs1 := cache.New(cache.NoExpiration, cache.NoExpiration)
-	cs2 := cache.New(cache.NoExpiration, cache.NoExpiration)
+	cs := zcache.New(zcache.NoExpiration, zcache.NoExpiration)
+	cs1 := zcache.New(zcache.NoExpiration, zcache.NoExpiration)
+	cs2 := zcache.New(zcache.NoExpiration, zcache.NoExpiration)
 	s := &Server{
 		Method:            m,
 		UserName:          username,
@@ -434,197 +434,4 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 		}
 	}(ue, dst)
 	return nil
-}
-
-package main
-
-import (
-	"bufio"
-	"fmt"
-	"io"
-	"log"
-	"net"
-	"os"
-	"os/signal"
-	"strconv"
-	"strings"
-	"sync"
-	"syscall"
-	"time"
-
-	"github.com/Potterli20/socks5-fork/cache"
-)
-
-type Server struct {
-	Host       string
-	Port       int
-	Auth       bool
-	Username   string
-	Password   string
-	Verbose    bool
-	Timeout    time.Duration
-	BufferSize int
-
-	BlacklistFile string
-	WhitelistFile string
-	blacklist     map[string]bool
-	whitelist     map[string]bool
-
-	// Cache for different purposes
-	dnsCache   *cache.Cache
-	blockCache *cache.Cache
-	allowCache *cache.Cache
-
-	listener net.Listener
-	quit     chan interface{}
-	wg       sync.WaitGroup
-}
-
-func NewServer(host string, port int) *Server {
-	return &Server{
-		Host:       host,
-		Port:       port,
-		Auth:       false,
-		Verbose:    false,
-		Timeout:    60 * time.Second,
-		BufferSize: 4096,
-		blacklist:  make(map[string]bool),
-		whitelist:  make(map[string]bool),
-		dnsCache:   cache.New(cache.NoExpiration, 1*time.Minute),
-		blockCache: cache.New(cache.NoExpiration, 1*time.Minute),
-		allowCache: cache.New(cache.NoExpiration, 1*time.Minute),
-		quit:       make(chan interface{}),
-	}
-}
-
-func (s *Server) EnableAuth(username, password string) {
-	s.Auth = true
-	s.Username = username
-	s.Password = password
-}
-
-func (s *Server) SetVerbose(verbose bool) {
-	s.Verbose = verbose
-}
-
-func (s *Server) SetTimeout(timeout time.Duration) {
-	s.Timeout = timeout
-}
-
-func (s *Server) SetBufferSize(size int) {
-	s.BufferSize = size
-}
-
-func (s *Server) LoadBlacklist(filename string) error {
-	s.BlacklistFile = filename
-	return s.loadIPList(filename, s.blacklist)
-}
-
-func (s *Server) LoadWhitelist(filename string) error {
-	s.WhitelistFile = filename
-	return s.loadIPList(filename, s.whitelist)
-}
-
-func (s *Server) loadIPList(filename string, list map[string]bool) error {
-	file, err := os.Open(filename)
-	if err != nil {
-		return err
-	}
-	defer file.Close()
-
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		ip := strings.TrimSpace(scanner.Text())
-		if ip != "" && !strings.HasPrefix(ip, "#") {
-			list[ip] = true
-		}
-	}
-
-	return scanner.Err()
-}
-
-func (s *Server) Start() error {
-	var err error
-	s.listener, err = net.Listen("tcp", s.Host+":"+strconv.Itoa(s.Port))
-	if err != nil {
-		return err
-	}
-
-	fmt.Printf("SOCKS5 server listening on %s:%d\n", s.Host, s.Port)
-
-	s.wg.Add(1)
-	go s.serve()
-
-	return nil
-}
-
-func (s *Server) serve() {
-	defer s.wg.Done()
-
-	for {
-		conn, err := s.listener.Accept()
-		if err != nil {
-			select {
-			case <-s.quit:
-				return
-			default:
-				log.Printf("accept error: %v\n", err)
-			}
-			continue
-		}
-
-		s.wg.Add(1)
-		go func() {
-			defer s.wg.Done()
-			s.handleConnection(conn)
-		}()
-	}
-}
-
-func (s *Server) Stop() {
-	close(s.quit)
-	s.listener.Close()
-	s.wg.Wait()
-}
-
-func (s *Server) handleConnection(conn net.Conn) {
-	defer conn.Close()
-
-	// Set timeout
-	conn.SetDeadline(time.Now().Add(s.Timeout))
-
-	// Handle SOCKS5 handshake
-	if err := s.handshake(conn); err != nil {
-		log.Printf("handshake error: %v\n", err)
-		return
-	}
-
-	// Handle SOCKS5 request
-	if err := s.handleRequest(conn); err != nil {
-		log.Printf("request error: %v\n", err)
-		return
-	}
-}
-
-func main() {
-	server := NewServer("127.0.0.1", 1080)
-	server.SetVerbose(true)
-
-	// Handle SIGINT and SIGTERM
-	sigChan := make(chan os.Signal, 1)
-	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
-
-	go func() {
-		<-sigChan
-		fmt.Println("\nShutting down server...")
-		server.Stop()
-		os.Exit(0)
-	}()
-
-	if err := server.Start(); err != nil {
-		log.Fatal(err)
-	}
-
-	// Wait forever
-	select {}
 }
