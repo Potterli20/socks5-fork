@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/txthinking/runnergroup"
-	"github.com/zondax/golem/pkg/logger"
-	"github.com/zondax/golem/pkg/metrics"
-	"github.com/zondax/golem/pkg/zcache"
+	"github.com/Potterli20/golem/pkg/logger"
+	"github.com/Potterli20/golem/pkg/metrics"
+	"github.com/Potterli20/golem/pkg/zcache"
 )
 
 var (
