@@ -6,7 +6,7 @@ tool golang.org/x/tools/cmd/stringer
 
 require (
 	github.com/Potterli20/golem v0.0.0-20250813061720-798f7bcae93b
-	github.com/miekg/dns v1.1.69-0.20250803161624-28c618b3a0ab
+	github.com/miekg/dns v1.1.69-0.20250813131329-b01620ea8d77
 	github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
 )
 
