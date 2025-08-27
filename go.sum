@@ -1,5 +1,3 @@
-github.com/Potterli20/golem v0.0.0-20250827061546-ab05524596fb h1:nGOEFqsefFiBVcYV8rT+cX9l5kTXtmxq6yT7VyrJOV0=
-github.com/Potterli20/golem v0.0.0-20250827061546-ab05524596fb/go.mod h1:oQV9ytMeUUe6wGuvG3bOHA6vbuRe3fPL+qYVX0fmiwQ=
 github.com/Potterli20/golem v0.0.0-20250827121955-32ca4870cfd3 h1:n6W6wdG277tmGtoy83ngWGWm/Oo3YNKSy5HzDGRPTxk=
 github.com/Potterli20/golem v0.0.0-20250827121955-32ca4870cfd3/go.mod h1:SV4pV6I83pHN1FLpfPekMqyrVYgW5GtCImNl7sunT2I=
 github.com/alicebob/miniredis/v2 v2.35.0 h1:QwLphYqCEAo1eu1TqPRN2jgVMPBweeQcR21jeqDCONI=
@@ -94,8 +92,6 @@ github.com/shirou/gopsutil/v4 v4.25.8-0.20250809033336-ffcdc2b7662f h1:S+PHRM3lk
 github.com/shirou/gopsutil/v4 v4.25.8-0.20250809033336-ffcdc2b7662f/go.mod h1:4f4j4w8HLMPWEFs3BO2UBBLigKAaWYwkSkbIt/6Q4Ss=
 github.com/stretchr/objx v0.5.2 h1:xuMeJ0Sdp5ZMRXx/aWO6RZxdr3beISkG5/G/aIRr3pY=
 github.com/stretchr/objx v0.5.2/go.mod h1:FRsXN1f5AsAjCGJKqEizvkpNtU+EGNCLh3NxZ/8L+MA=
-github.com/stretchr/testify v1.11.0 h1:ib4sjIrwZKxE5u/Japgo/7SJV3PvgjGiRNAvTVGqQl8=
-github.com/stretchr/testify v1.11.0/go.mod h1:wZwfW3scLgRK+23gO65QZefKpKQRnfz6sD981Nm4B6U=
 github.com/stretchr/testify v1.11.1 h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U=
 github.com/stretchr/testify v1.11.1/go.mod h1:wZwfW3scLgRK+23gO65QZefKpKQRnfz6sD981Nm4B6U=
 github.com/stvp/tempredis v0.0.0-20181119212430-b82af8480203 h1:QVqDTf3h2WHt08YuiTGPZLls0Wq99X9bWd0Q5ZSBesM=
