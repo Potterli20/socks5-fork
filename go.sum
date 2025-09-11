@@ -1,5 +1,7 @@
 github.com/Potterli20/golem v0.0.0-20250911061552-1bf79d5038e3 h1:DPGSxMBezJiIILVFc2R8WBaXC8eC/UhXzplTkl+r/c0=
 github.com/Potterli20/golem v0.0.0-20250911061552-1bf79d5038e3/go.mod h1:RwjSPiovloZvvsc1TU9aYVzwblGXtrgdq9b7OiKRPv4=
+github.com/Potterli20/golem v0.0.0-20250911121907-35e4bf5328a0 h1:tmi5rVZnOtxZJYZhwM0tG2fNbwDY0zZkCvlJPom0F8w=
+github.com/Potterli20/golem v0.0.0-20250911121907-35e4bf5328a0/go.mod h1:RwjSPiovloZvvsc1TU9aYVzwblGXtrgdq9b7OiKRPv4=
 github.com/alicebob/miniredis/v2 v2.35.0 h1:QwLphYqCEAo1eu1TqPRN2jgVMPBweeQcR21jeqDCONI=
 github.com/alicebob/miniredis/v2 v2.35.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
