@@ -1,5 +1,7 @@
 github.com/Potterli20/golem v0.0.0-20250913121728-3a4337aa60da h1:LGseUY1p8+dIpjaUTNDuC3WsTxgCPuqdUFlqB4UStAU=
 github.com/Potterli20/golem v0.0.0-20250913121728-3a4337aa60da/go.mod h1:zgGerwhHbd7r6c1nfyHTQbF2b+/0moWnK8euA+0dQOU=
+github.com/Potterli20/golem v0.0.0-20250915181510-f9f89d9c9c72 h1:h1MvIiT/NlyUun3VrjB1rBJEDtU745v6TCxIqpbMsB4=
+github.com/Potterli20/golem v0.0.0-20250915181510-f9f89d9c9c72/go.mod h1:CHlU2N/3MfcpeDHGc9OgVKnRQr+cUE2mBrjIzAt6Tcg=
 github.com/alicebob/miniredis/v2 v2.35.0 h1:QwLphYqCEAo1eu1TqPRN2jgVMPBweeQcR21jeqDCONI=
 github.com/alicebob/miniredis/v2 v2.35.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
@@ -108,6 +110,7 @@ github.com/yusufpapurcu/wmi v1.2.4 h1:zFUKzehAFReQwLys1b/iSMl+JQGSCSjtVqQn9bBrPo
 github.com/yusufpapurcu/wmi v1.2.4/go.mod h1:SBZ9tNy3G9/m5Oi98Zks0QjeHVDvuK0qfxQmPyzfmi0=
 go.opentelemetry.io/auto/sdk v1.2.0 h1:YpRtUFjvhSymycLS2T81lT6IGhcUP+LUPtv0iv1N8bM=
 go.opentelemetry.io/auto/sdk v1.2.0/go.mod h1:1deq2zL7rwjwC8mR7XgY2N+tlIl6pjmEUoLDENMEzwk=
+go.opentelemetry.io/auto/sdk v1.2.1 h1:jXsnJ4Lmnqd11kwkBV2LgLoFMZKizbCi5fNZ/ipaZ64=
 go.opentelemetry.io/otel v1.38.0 h1:RkfdswUDRimDg0m2Az18RKOsnI8UDzppJAtj01/Ymk8=
 go.opentelemetry.io/otel v1.38.0/go.mod h1:zcmtmQ1+YmQM9wrNsTGV/q/uyusom3P8RxwExxkZhjM=
 go.opentelemetry.io/otel/metric v1.38.0 h1:Kl6lzIYGAh5M159u9NgiRkmoMKjvbsKtYRwgfrA6WpA=
