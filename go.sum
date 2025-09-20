@@ -58,8 +58,6 @@ github.com/kylelemons/godebug v1.1.0 h1:RPNrshWIDI6G2gRW9EHilWtl7Z6Sb1BR0xunSBf0
 github.com/kylelemons/godebug v1.1.0/go.mod h1:9/0rRGxNHcop5bhtWyNeEfOS8JIWk580+fNqagV/RAw=
 github.com/lufia/plan9stats v0.0.0-20250827001030-24949be3fa54 h1:mFWunSatvkQQDhpdyuFAYwyAan3hzCuma+Pz8sqvOfg=
 github.com/lufia/plan9stats v0.0.0-20250827001030-24949be3fa54/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
-github.com/miekg/dns v1.1.69-0.20250901082624-d495d3329772 h1:IyEwPSM6PU1ufN/nQ2eyVfjXYLkTPPBjCwRZU1W3hx0=
-github.com/miekg/dns v1.1.69-0.20250901082624-d495d3329772/go.mod h1:fnam+ZplEAuM/wLdG9Cq30qqQ2hLvFg4j94DhKZAp/8=
 github.com/miekg/dns v1.1.69-0.20250920065150-294d37389ccc h1:hBFUTIJViiANS9sSTdXza7R8RgpksG6Hx6xkjBcuSkA=
 github.com/miekg/dns v1.1.69-0.20250920065150-294d37389ccc/go.mod h1:fnam+ZplEAuM/wLdG9Cq30qqQ2hLvFg4j94DhKZAp/8=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 h1:C3w9PqII01/Oq1c1nUAm88MOHcQC9l5mIlSMApZMrHA=
