@@ -5,7 +5,7 @@ go 1.25.0
 tool golang.org/x/tools/cmd/stringer
 
 require (
-	github.com/Potterli20/golem v0.0.0-20250930181505-a7d60a520f87
+	github.com/Potterli20/golem v0.0.0-20251001005452-366f94048128
 	github.com/miekg/dns v1.1.69-0.20250920065150-294d37389ccc
 	github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
 )
@@ -34,7 +34,7 @@ require (
 	github.com/prometheus/common v0.66.1 // indirect
 	github.com/prometheus/procfs v0.17.0 // indirect
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
-	github.com/shirou/gopsutil/v4 v4.25.8 // indirect
+	github.com/shirou/gopsutil/v4 v4.25.9 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/stretchr/testify v1.11.1 // indirect
 	github.com/tklauser/go-sysconf v0.3.15 // indirect
