@@ -1,5 +1,3 @@
-github.com/Potterli20/golem v0.0.0-20251118181655-d63593e27dcb h1:0lBF4GCrZe5uuGPk4Fo3hZRBtcLnkKQB3UC84gcxY/I=
-github.com/Potterli20/golem v0.0.0-20251118181655-d63593e27dcb/go.mod h1:NnPNTwOEmQjgp8VmCDYna1xZ3NS9gSN0Dknsot/z0ls=
 github.com/Potterli20/golem v0.0.0-20251120005057-8810af322584 h1:Q54zvpbOGl6gdC9UQ2M8etUTDLnKFOYnv2dNGt1Uz6E=
 github.com/Potterli20/golem v0.0.0-20251120005057-8810af322584/go.mod h1:QWf/FWIRs6feVraCPiJ/rvUFJv9aqcmVxy2oh1AjXhM=
 github.com/alicebob/miniredis/v2 v2.35.0 h1:QwLphYqCEAo1eu1TqPRN2jgVMPBweeQcR21jeqDCONI=
@@ -124,8 +122,6 @@ go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
 go.uber.org/goleak v1.3.0/go.mod h1:CoHD4mav9JJNrW/WLlf7HGZPjdw8EucARQHekz1X6bE=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
 go.uber.org/multierr v1.11.0/go.mod h1:20+QtiLqy0Nd6FdQB9TLXag12DsQkrbs3htMFfDN80Y=
-go.uber.org/zap v1.27.0 h1:aJMhYGrd5QSmlpLMr2MftRKl7t8J8PTZPA732ud/XR8=
-go.uber.org/zap v1.27.0/go.mod h1:GB2qFLM7cTU87MWRP2mPIjqfIDnGu+VIO4V/SdhGo2E=
 go.uber.org/zap v1.27.1 h1:08RqriUEv8+ArZRYSTXy1LeBScaMpVSTBhCeaZYfMYc=
 go.uber.org/zap v1.27.1/go.mod h1:GB2qFLM7cTU87MWRP2mPIjqfIDnGu+VIO4V/SdhGo2E=
 go.yaml.in/yaml/v2 v2.4.3 h1:6gvOSjQoTB3vt1l+CU+tSyi/HOjfOjRLJ4YwYZGwRO0=
