@@ -1,5 +1,7 @@
 github.com/Potterli20/golem v0.0.0-20251201061904-d7da3da4f983 h1:CIobJascKA6Skqb/DoEM1j7Bn/RczhRG9Yy7Tm9ZzOI=
 github.com/Potterli20/golem v0.0.0-20251201061904-d7da3da4f983/go.mod h1:Jdjqoz8JM6NiUX1etABtBcCvrn5M57YQVma0frLzxFU=
+github.com/Potterli20/golem v0.0.0-20251201122256-f5e8ca4f2ca4 h1:UW0jvPVTINvwR9iHMYoeCClrRpt9QoFAVP0K6fD55q8=
+github.com/Potterli20/golem v0.0.0-20251201122256-f5e8ca4f2ca4/go.mod h1:iSNWA+khuAp7Qgmca1osSg3dsmlw4vzULSR8rtSs1j8=
 github.com/alicebob/miniredis/v2 v2.35.0 h1:QwLphYqCEAo1eu1TqPRN2jgVMPBweeQcR21jeqDCONI=
 github.com/alicebob/miniredis/v2 v2.35.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
@@ -50,6 +52,7 @@ github.com/hashicorp/go-multierror v1.1.1 h1:H5DkEtf6CXdFp0N0Em5UCwQpXMWke8IA0+l
 github.com/hashicorp/go-multierror v1.1.1/go.mod h1:iw975J/qwKPdAO1clOe2L8331t/9/fmwbPZ6JB6eMoM=
 github.com/klauspost/compress v1.18.1 h1:bcSGx7UbpBqMChDtsF28Lw6v/G94LPrrbMbdC3JH2co=
 github.com/klauspost/compress v1.18.1/go.mod h1:ZQFFVG+MdnR0P+l6wpXgIL4NTtwiKIdBnrBd8Nrxr+0=
+github.com/klauspost/compress v1.18.2 h1:iiPHWW0YrcFgpBYhsA6D1+fqHssJscY/Tm/y2Uqnapk=
 github.com/kr/pretty v0.3.1 h1:flRD4NNwYAUpkphVc1HcthR4KEIFJ65n8Mw5qdRn3LE=
 github.com/kr/pretty v0.3.1/go.mod h1:hoEshYVHaxMs3cyo3Yncou5ZscifuDolrwPKZanG3xk=
 github.com/kr/text v0.2.0 h1:5Nx0Ya0ZqY2ygV366QzturHI13Jq95ApcVaJBhpS+AY=
