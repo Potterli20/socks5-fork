@@ -1,5 +1,3 @@
-github.com/Potterli20/golem v0.0.0-20251216005559-9e10efb8a712 h1:2KNVUZNDcPmi57z5gdxTC6MN9d6InFJjw6+Zzr2+WQc=
-github.com/Potterli20/golem v0.0.0-20251216005559-9e10efb8a712/go.mod h1:loH58FeIDII2piYJ+k6g+MVprz3Zv5TPfQQVkxrcaSo=
 github.com/Potterli20/golem v0.0.0-20251216061920-d2c532ca48a2 h1:oi3kkx7O1u9P2ZXmKCjZpmuZ+SgELLeCD8xeJ5IKRLY=
 github.com/Potterli20/golem v0.0.0-20251216061920-d2c532ca48a2/go.mod h1:loH58FeIDII2piYJ+k6g+MVprz3Zv5TPfQQVkxrcaSo=
 github.com/alicebob/miniredis/v2 v2.35.0 h1:QwLphYqCEAo1eu1TqPRN2jgVMPBweeQcR21jeqDCONI=
@@ -62,6 +60,8 @@ github.com/lufia/plan9stats v0.0.0-20251013123823-9fd1530e3ec3 h1:PwQumkgq4/acIi
 github.com/lufia/plan9stats v0.0.0-20251013123823-9fd1530e3ec3/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
 github.com/miekg/dns v1.1.69 h1:Kb7Y/1Jo+SG+a2GtfoFUfDkG//csdRPwRLkCsxDG9Sc=
 github.com/miekg/dns v1.1.69/go.mod h1:7OyjD9nEba5OkqQ/hB4fy3PIoxafSZJtducccIelz3g=
+github.com/miekg/dns v1.1.70-0.20251216091959-3126b782690b h1:MV++anGdEF1UYanI0di/U0J1Yfcmqy0VlXAdLkRTRyQ=
+github.com/miekg/dns v1.1.70-0.20251216091959-3126b782690b/go.mod h1:7OyjD9nEba5OkqQ/hB4fy3PIoxafSZJtducccIelz3g=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 h1:C3w9PqII01/Oq1c1nUAm88MOHcQC9l5mIlSMApZMrHA=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822/go.mod h1:+n7T8mK8HuQTcFwEeznm/DIxMOiR9yIdICNftLE1DvQ=
 github.com/nxadm/tail v1.4.8 h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=
