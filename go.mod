@@ -5,7 +5,7 @@ go 1.25.3
 tool golang.org/x/tools/cmd/stringer
 
 require (
-	github.com/Potterli20/golem v0.0.0-20260225011404-7f80a0982344
+	github.com/Potterli20/golem v0.0.0-20260225065032-009bd27c9e8d
 	github.com/miekg/dns v1.1.73-0.20260209135720-ce76cb6c9b5f
 	github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
 )
@@ -21,7 +21,7 @@ require (
 	github.com/go-chi/chi/v5 v5.2.5 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/go-redis/redis/v8 v8.11.5 // indirect
-	github.com/go-redsync/redsync/v4 v4.15.0 // indirect
+	github.com/go-redsync/redsync/v4 v4.16.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/lufia/plan9stats v0.0.0-20260216142805-b3301c5f2a88 // indirect
