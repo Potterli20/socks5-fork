@@ -1,5 +1,7 @@
 github.com/Potterli20/golem v0.0.0-20260324010649-bcc38cf0744a h1:RSGkDfROD/sDQuE9fPewtV1namp9wHZfcCZDnqGbeuc=
 github.com/Potterli20/golem v0.0.0-20260324010649-bcc38cf0744a/go.mod h1:f5f81MJwdNlBNZNc2YwpdXwQx56MapZ+rD2rGJs+PEE=
+github.com/Potterli20/golem v0.0.0-20260324065126-18864930fd98 h1:5h2akRLrSOkbRvhEE0JvNtJNY6sNXG3/ySkfVOLst8I=
+github.com/Potterli20/golem v0.0.0-20260324065126-18864930fd98/go.mod h1:WRWc3bOckxPMs/escF1TjTEVGSZbseQ0CDKOttXs8rs=
 github.com/alicebob/miniredis/v2 v2.37.0 h1:RheObYW32G1aiJIj81XVt78ZHJpHonHLHW7OLIshq68=
 github.com/alicebob/miniredis/v2 v2.37.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
@@ -58,6 +60,8 @@ github.com/kylelemons/godebug v1.1.0 h1:RPNrshWIDI6G2gRW9EHilWtl7Z6Sb1BR0xunSBf0
 github.com/kylelemons/godebug v1.1.0/go.mod h1:9/0rRGxNHcop5bhtWyNeEfOS8JIWk580+fNqagV/RAw=
 github.com/lufia/plan9stats v0.0.0-20260216142805-b3301c5f2a88 h1:PTw+yKnXcOFCR6+8hHTyWBeQ/P4Nb7dd4/0ohEcWQuM=
 github.com/lufia/plan9stats v0.0.0-20260216142805-b3301c5f2a88/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
+github.com/lufia/plan9stats v0.0.0-20260324052639-156f7da3f749 h1:Qj3hTcdWH8uMZDI41HNuTuJN525C7NBrbtH5kSO6fPk=
+github.com/lufia/plan9stats v0.0.0-20260324052639-156f7da3f749/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
 github.com/miekg/dns v1.1.73-0.20260306083003-cd053176d80a h1:cuLlF2RROqUcWdDpdQVrn6TCISf5HU+QrIuyuMstnsc=
 github.com/miekg/dns v1.1.73-0.20260306083003-cd053176d80a/go.mod h1:Ko7fnKSV+2WDN83nU3hO1voAHED8bEkcg9CZ+vI0dk4=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 h1:C3w9PqII01/Oq1c1nUAm88MOHcQC9l5mIlSMApZMrHA=
