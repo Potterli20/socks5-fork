@@ -5,7 +5,7 @@ go 1.25.7
 tool golang.org/x/tools/cmd/stringer
 
 require (
-	github.com/Potterli20/golem v0.0.0-20260508071422-c8593e89e0de
+	github.com/Potterli20/golem v0.0.0-20260508130550-35bc51e0bb51
 	github.com/miekg/dns v1.1.73-0.20260402044838-d1539a788a12
 	github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
 )
@@ -46,7 +46,7 @@ require (
 	golang.org/x/mod v0.34.0 // indirect
 	golang.org/x/net v0.53.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect
-	golang.org/x/sys v0.43.0 // indirect
+	golang.org/x/sys v0.44.0 // indirect
 	golang.org/x/tools v0.43.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
