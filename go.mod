@@ -5,7 +5,7 @@ go 1.25.7
 tool golang.org/x/tools/cmd/stringer
 
 require (
-	github.com/Potterli20/golem v0.0.0-20260508190231-de0127c3afe2
+	github.com/Potterli20/golem v0.0.0-20260509015213-5f3b406ec8da
 	github.com/miekg/dns v1.1.73-0.20260402044838-d1539a788a12
 	github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
 )
@@ -44,7 +44,7 @@ require (
 	go.uber.org/zap v1.28.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.4 // indirect
 	golang.org/x/mod v0.35.0 // indirect
-	golang.org/x/net v0.53.0 // indirect
+	golang.org/x/net v0.54.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect
 	golang.org/x/sys v0.44.0 // indirect
 	golang.org/x/tools v0.44.0 // indirect
