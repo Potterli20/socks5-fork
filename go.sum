@@ -1,5 +1,3 @@
-github.com/Potterli20/golem v0.0.0-20260519143311-0d86243bc501 h1:p+2nAqM8evYLl9MUnBmGbVi6DrNaYiYUydCjE2SKF2w=
-github.com/Potterli20/golem v0.0.0-20260519143311-0d86243bc501/go.mod h1:ely/F4emP32/KFJXzx7wkjFr8v6szf/3fj4v/lt/gI4=
 github.com/Potterli20/golem v0.0.0-20260519194117-3206dee95a12 h1:NR9a+tpPnkMFM3RDq+cVoOSs618I+rIyYb9HJMHI55Y=
 github.com/Potterli20/golem v0.0.0-20260519194117-3206dee95a12/go.mod h1:KZEIx5yrSwOiM2IjXbKWCwRgAEMqo4Kev9pwWaVF7Lg=
 github.com/alicebob/miniredis/v2 v2.37.0 h1:RheObYW32G1aiJIj81XVt78ZHJpHonHLHW7OLIshq68=
