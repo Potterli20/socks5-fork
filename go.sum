@@ -1,5 +1,3 @@
-github.com/Potterli20/golem v0.0.0-20260522084703-41dfab5ed875 h1:yL0VzqiPSUKuErX0te0+nYNl1VPESD3Mo1nijqG9WOw=
-github.com/Potterli20/golem v0.0.0-20260522084703-41dfab5ed875/go.mod h1:V0W/9652Y5qynriS9cwn7TOLOJ3o6LMi9aiQOmgUMpc=
 github.com/Potterli20/golem v0.0.0-20260522141255-94149f6c2e04 h1:fILuAcUGRvtNPrgnzJ3zLaC4VX3M0PnExNYL+rmYzls=
 github.com/Potterli20/golem v0.0.0-20260522141255-94149f6c2e04/go.mod h1:V0W/9652Y5qynriS9cwn7TOLOJ3o6LMi9aiQOmgUMpc=
 github.com/alicebob/miniredis/v2 v2.37.0 h1:RheObYW32G1aiJIj81XVt78ZHJpHonHLHW7OLIshq68=
@@ -24,6 +22,8 @@ github.com/fsnotify/fsnotify v1.10.1 h1:b0/UzAf9yR5rhf3RPm9gf3ehBPpf0oZKIjtpKrx5
 github.com/fsnotify/fsnotify v1.10.1/go.mod h1:TLheqan6HD6GBK6PrDWyDPBaEV8LspOxvPSjC+bVfgo=
 github.com/go-chi/chi/v5 v5.2.5 h1:Eg4myHZBjyvJmAFjFvWgrqDTXFyOzjj7YIm3L3mu6Ug=
 github.com/go-chi/chi/v5 v5.2.5/go.mod h1:X7Gx4mteadT3eDOMTsXzmI4/rwUpOwBHLpAfupzFJP0=
+github.com/go-chi/chi/v5 v5.3.0 h1:halUjDxhshgXHMrao5bB8eNBXo/rnzwr8m5m36glehM=
+github.com/go-chi/chi/v5 v5.3.0/go.mod h1:R+tYY2hNuVUUjxoPtqUdgBqevM9s9njzkTLutVsOCto=
 github.com/go-logr/logr v1.4.3 h1:CjnDlHq8ikf6E492q6eKboGOC0T8CDaOvkHCIg8idEI=
 github.com/go-logr/logr v1.4.3/go.mod h1:9T104GzyrTigFIr8wt5mBrctHMim0Nb2HLGrmQ40KvY=
 github.com/go-logr/stdr v1.2.2 h1:hSWxHoqTgW2S2qGc0LTAI563KZ5YKYRhT3MFKZMbjag=
