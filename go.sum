@@ -1,7 +1,7 @@
-github.com/Potterli20/golem v0.0.0-20260617023828-37e9039de0c2 h1:5LKfA+n/UPvwYe+C1GXAK1/RO39Jt3pDJqhI7C1bau4=
-github.com/Potterli20/golem v0.0.0-20260617023828-37e9039de0c2/go.mod h1:zb7x4UCAabGb+CuBRR2945cUlymhxPx5NnG3jo5calA=
 github.com/Potterli20/golem v0.0.0-20260617102340-cd79925c7172 h1:RRUpvIx1iRL9yZv0U67SSOFC60UlFPSGVNscVHMra0M=
 github.com/Potterli20/golem v0.0.0-20260617102340-cd79925c7172/go.mod h1:KF3Y3cniBnxJ2CgyDiZzini4suHRrpdnFrEhHQfXFIQ=
+github.com/Potterli20/golem v0.0.0-20260617144804-3f4b2a230b57 h1:AgX8zmvE7ghkVz5wJepJ7BYIghQ321+w+yXXdTiON0I=
+github.com/Potterli20/golem v0.0.0-20260617144804-3f4b2a230b57/go.mod h1:KF3Y3cniBnxJ2CgyDiZzini4suHRrpdnFrEhHQfXFIQ=
 github.com/alicebob/miniredis/v2 v2.38.0 h1:nZAzCR+Lj+Vxk4ZXzm2NuKq2O33RXj1XxJ2e2uP9jiw=
 github.com/alicebob/miniredis/v2 v2.38.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
@@ -80,8 +80,6 @@ github.com/prometheus/client_golang v1.23.2 h1:Je96obch5RDVy3FDMndoUsjAhG5Edi49h
 github.com/prometheus/client_golang v1.23.2/go.mod h1:Tb1a6LWHB3/SPIzCoaDXI4I8UHKeFTEQ1YCr+0Gyqmg=
 github.com/prometheus/client_model v0.6.2 h1:oBsgwpGs7iVziMvrGhE53c/GrLUsZdHnqNwqPLxwZyk=
 github.com/prometheus/client_model v0.6.2/go.mod h1:y3m2F6Gdpfy6Ut/GBsUqTWZqCUvMVzSfMLjcu6wAwpE=
-github.com/prometheus/common v0.68.1 h1:omjRRl4QP4komogpXuhfeOiisQg7xdy8VM1UY+pStaY=
-github.com/prometheus/common v0.68.1/go.mod h1:ZzL3f6u94qUxh9p+tJTrF+FvBS1XXbbRAZCQkytAL0Y=
 github.com/prometheus/common v0.69.0 h1:OA85nJQS/T/MaYh/Q2CcgDKSGWqNIgrBDvDH85CuiNk=
 github.com/prometheus/common v0.69.0/go.mod h1:ZzL3f6u94qUxh9p+tJTrF+FvBS1XXbbRAZCQkytAL0Y=
 github.com/prometheus/procfs v0.20.1 h1:XwbrGOIplXW/AU3YhIhLODXMJYyC1isLFfYCsTEycfc=
