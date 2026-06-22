@@ -60,6 +60,8 @@ github.com/lufia/plan9stats v0.0.0-20260330125221-c963978e514e h1:Q6MvJtQK/iRcRt
 github.com/lufia/plan9stats v0.0.0-20260330125221-c963978e514e/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
 github.com/miekg/dns v1.1.73-0.20260402044838-d1539a788a12 h1:sfdz2rhLlzMml8zmv3WFseru6jP4Pm8PB+at57Ir06E=
 github.com/miekg/dns v1.1.73-0.20260402044838-d1539a788a12/go.mod h1:hBcNfObhP6OL8tg/LRRiRxqToCk64JmTahUFw2q39GM=
+github.com/miekg/dns v1.1.73-0.20260622091530-fa041eedc7a8 h1:xB0muGyS97xteVCqmlR26Um92T2SFw2KPEHdj6vQEA0=
+github.com/miekg/dns v1.1.73-0.20260622091530-fa041eedc7a8/go.mod h1:xaOtKoI+hggG45HQ5ipVFkFOAdhxyi4e2ub0XTS/prc=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 h1:C3w9PqII01/Oq1c1nUAm88MOHcQC9l5mIlSMApZMrHA=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822/go.mod h1:+n7T8mK8HuQTcFwEeznm/DIxMOiR9yIdICNftLE1DvQ=
 github.com/nxadm/tail v1.4.8 h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=
