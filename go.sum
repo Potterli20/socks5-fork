@@ -1,7 +1,7 @@
-github.com/Potterli20/golem v0.0.0-20260630192939-8cfc07f578bd h1:G3/3Uir2BzMm5H1ybFpOvbRttUwT7Wz0w8dB+87xjQg=
-github.com/Potterli20/golem v0.0.0-20260630192939-8cfc07f578bd/go.mod h1:XyhyfxwQwzugqJIUTuOX2hVpeMvJp6Ce4NZgCi7aj0o=
 github.com/Potterli20/golem v0.0.0-20260701021508-610974d7db5c h1:SqlLqt44sbtQwIsm9L00a8uqUs8rXJnMsicghJRHjRA=
 github.com/Potterli20/golem v0.0.0-20260701021508-610974d7db5c/go.mod h1:RxdQ6TCaGk8IQ/srIslxn56iNICOCeh+ZxCnHZmluHE=
+github.com/Potterli20/golem v0.0.0-20260701092649-de2ff7284b53 h1:+AUyrqYuXgff7ZV8xG52Oy9IzVsKp25OjUbj9rPSGV0=
+github.com/Potterli20/golem v0.0.0-20260701092649-de2ff7284b53/go.mod h1:RxdQ6TCaGk8IQ/srIslxn56iNICOCeh+ZxCnHZmluHE=
 github.com/alicebob/miniredis/v2 v2.38.0 h1:nZAzCR+Lj+Vxk4ZXzm2NuKq2O33RXj1XxJ2e2uP9jiw=
 github.com/alicebob/miniredis/v2 v2.38.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
@@ -92,8 +92,6 @@ github.com/redis/rueidis/rueidiscompat v1.0.71 h1:wNZ//kEjMZgBM0KCk7ncOX8KmAgROU
 github.com/redis/rueidis/rueidiscompat v1.0.71/go.mod h1:esmCLJvaRzZoKlgB82G1bY7Iky5TnO9Rz+NlhbEccFI=
 github.com/rogpeppe/go-internal v1.14.1 h1:UQB4HGPB6osV0SQTLymcB4TgvyWu6ZyliaW0tI/otEQ=
 github.com/rogpeppe/go-internal v1.14.1/go.mod h1:MaRKkUm5W0goXpeCfT7UZI6fk/L7L7so1lCWt35ZSgc=
-github.com/shirou/gopsutil/v4 v4.26.5 h1:RPcBXkpz7kOj9PqGFQOlBPZHsyaPvPVQc098y9RmCNM=
-github.com/shirou/gopsutil/v4 v4.26.5/go.mod h1:LZ6ewCSkBqUpvSOf+LsTGnRinC6iaNUNMGBtDkJBaLQ=
 github.com/shirou/gopsutil/v4 v4.26.6 h1:Mzr/npDtQC/xpeEuQKHZt8Zo9CmPvhTj8nkR8w5TLDs=
 github.com/shirou/gopsutil/v4 v4.26.6/go.mod h1:LZ6ewCSkBqUpvSOf+LsTGnRinC6iaNUNMGBtDkJBaLQ=
 github.com/stretchr/objx v0.5.3 h1:jmXUvGomnU1o3W/V5h2VEradbpJDwGrzugQQvL0POH4=
