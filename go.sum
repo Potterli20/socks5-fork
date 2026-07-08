@@ -1,5 +1,7 @@
 github.com/Potterli20/golem v0.0.0-20260708132751-0851c1da6b00 h1:OKM+r+ijBPR+AD1HqI4qUYlmcN0zGn+kWUmtqBw/S+4=
 github.com/Potterli20/golem v0.0.0-20260708132751-0851c1da6b00/go.mod h1:dZqgDBAkzQke2b1ZSKfRYRr+F1y3sa9tOTYoObyuNak=
+github.com/Potterli20/golem v0.0.0-20260708190435-8f7f35f90d30 h1:D4PmA+4YPDfns7kAufqH8INo24XPz1B/Y81XX/pmX64=
+github.com/Potterli20/golem v0.0.0-20260708190435-8f7f35f90d30/go.mod h1:zqB12rG5L5P1SjhLXgYGcv0z/mdjFhJkuxE+srJGCcU=
 github.com/alicebob/miniredis/v2 v2.38.0 h1:nZAzCR+Lj+Vxk4ZXzm2NuKq2O33RXj1XxJ2e2uP9jiw=
 github.com/alicebob/miniredis/v2 v2.38.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
@@ -138,6 +140,7 @@ golang.org/x/sys v0.47.0 h1:o7XGOvZQCADBQQ4Y7VNq2dRWQR7JmOUW8Kxx4ZsNgWs=
 golang.org/x/sys v0.47.0/go.mod h1:4GL1E5IUh+htKOUEOaiffhrAeqysfVGipDYzABqnCmw=
 golang.org/x/text v0.39.0 h1:UbZz4pLOvn600D6Oh6GGEI6VAmndrEBLv8/6BEXzyus=
 golang.org/x/text v0.39.0/go.mod h1:3UwRclnC2g0TU9x8PZiyfOajCd1zaUNHF9cvqcQZ+ZM=
+golang.org/x/text v0.40.0 h1:Ub2Z6/xjgF1WrYQz2nuITOEegKFtiIy+rieRJ5lHZKs=
 golang.org/x/tools v0.47.0 h1:7Kn5x/d1svx/PzryTsqeoZN4TZwqeH5pGWjefhLi/1Q=
 golang.org/x/tools v0.47.0/go.mod h1:dFHnyTvFWY212G+h7ZY4Vsp/K3U4/7W9TyVaAul8uCA=
 google.golang.org/protobuf v1.36.11 h1:fV6ZwhNocDyBLK0dj+fg8ektcVegBBuEolpbTQyBNVE=
