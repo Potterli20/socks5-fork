@@ -1,5 +1,3 @@
-github.com/Potterli20/golem v0.0.0-20260708190435-8f7f35f90d30 h1:D4PmA+4YPDfns7kAufqH8INo24XPz1B/Y81XX/pmX64=
-github.com/Potterli20/golem v0.0.0-20260708190435-8f7f35f90d30/go.mod h1:zqB12rG5L5P1SjhLXgYGcv0z/mdjFhJkuxE+srJGCcU=
 github.com/Potterli20/golem v0.0.0-20260709015105-f96d42384aa8 h1:xmSa7LRkqC7cT0CdH/cvzlLJRyPIbKcHKl8rufsBXZI=
 github.com/Potterli20/golem v0.0.0-20260709015105-f96d42384aa8/go.mod h1:CH0ajDap4vTUnjlJq15qKTdybOJmclJsbKNIXNwepak=
 github.com/alicebob/miniredis/v2 v2.38.0 h1:nZAzCR+Lj+Vxk4ZXzm2NuKq2O33RXj1XxJ2e2uP9jiw=
@@ -57,6 +55,8 @@ github.com/lufia/plan9stats v0.0.0-20260627054121-477a66015f15 h1:YkjVPl/YH5XlJ+
 github.com/lufia/plan9stats v0.0.0-20260627054121-477a66015f15/go.mod h1:autxFIvghDt3jPTLoqZ9OZ7s9qTGNAWmYCjVFWPX/zg=
 github.com/miekg/dns v1.1.73-0.20260622091530-fa041eedc7a8 h1:xB0muGyS97xteVCqmlR26Um92T2SFw2KPEHdj6vQEA0=
 github.com/miekg/dns v1.1.73-0.20260622091530-fa041eedc7a8/go.mod h1:xaOtKoI+hggG45HQ5ipVFkFOAdhxyi4e2ub0XTS/prc=
+github.com/miekg/dns v1.1.73-0.20260709071206-24ce5ef35470 h1:wuwG/RvVtadj3fBA/yq0oyc3o/YjNPBqZva+G2TqETs=
+github.com/miekg/dns v1.1.73-0.20260709071206-24ce5ef35470/go.mod h1:PfzHdk8TaHFUb7/7M3LqWdmyLCyboMBECtLPEPrPykY=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 h1:C3w9PqII01/Oq1c1nUAm88MOHcQC9l5mIlSMApZMrHA=
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822/go.mod h1:+n7T8mK8HuQTcFwEeznm/DIxMOiR9yIdICNftLE1DvQ=
 github.com/nxadm/tail v1.4.8 h1:nPr65rt6Y5JFSKQO7qToXr7pePgD6Gwiw05lkbyAQTE=
@@ -129,8 +129,6 @@ go.yaml.in/yaml/v3 v3.0.4 h1:tfq32ie2Jv2UxXFdLJdh3jXuOzWiL1fo0bu/FbuKpbc=
 go.yaml.in/yaml/v3 v3.0.4/go.mod h1:DhzuOOF2ATzADvBadXxruRBLzYTpT36CKvDb3+aBEFg=
 golang.org/x/mod v0.37.0 h1:vF1DjpVEshcIqoEaauuHebaLk1O1forxjxBaVn884JQ=
 golang.org/x/mod v0.37.0/go.mod h1:m8S8VeM9r4dzDwjrKO0a1sZP3YjeMamRRlD+fmR2Q/0=
-golang.org/x/net v0.56.0 h1:Rw8j/hFzGvJUZwNBXnAtf5sVDVt+65SK2C7IxCxZt5o=
-golang.org/x/net v0.56.0/go.mod h1:D3Ku6r+V6JROoZK144D2XfMHFcMq/0zSfLelVTCFKec=
 golang.org/x/net v0.57.0 h1:K5+3DljvIuDG9/Jv9rvyMywYNFCQ9RSUY6OOTTkT+tE=
 golang.org/x/net v0.57.0/go.mod h1:KpXc8iv+r3XplLAG/f7Jsf9RPszJzdR0f58q9vGOuEU=
 golang.org/x/sync v0.22.0 h1:SZjpbeLmrCk4xhRSZFNZW5gFUeCeFgjekvI/+gfScek=
