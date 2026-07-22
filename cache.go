@@ -10,8 +10,8 @@ import (
 var ErrNotFound = errors.New("not found")
 
 type LocalCache interface {
-	Set(ctx context.Context, key string, value interface{}, ttl time.Duration) error
-	Get(ctx context.Context, key string) (interface{}, error)
+	Set(ctx context.Context, key string, value any, ttl time.Duration) error
+	Get(ctx context.Context, key string) (any, error)
 	Delete(ctx context.Context, key string) error
 	IsNotFoundError(err error) bool
 }
@@ -22,7 +22,7 @@ type memoryCache struct {
 }
 
 type cacheItem struct {
-	value     interface{}
+	value     any
 	expiresAt time.Time
 }
 
@@ -34,7 +34,7 @@ func NewLocalCache() LocalCache {
 	return c
 }
 
-func (c *memoryCache) Set(_ context.Context, key string, value interface{}, ttl time.Duration) error {
+func (c *memoryCache) Set(_ context.Context, key string, value any, ttl time.Duration) error {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	c.items[key] = &cacheItem{
@@ -44,7 +44,7 @@ func (c *memoryCache) Set(_ context.Context, key string, value interface{}, ttl 
 	return nil
 }
 
-func (c *memoryCache) Get(_ context.Context, key string) (interface{}, error) {
+func (c *memoryCache) Get(_ context.Context, key string) (any, error) {
 	c.mu.RLock()
 	defer c.mu.RUnlock()
 	item, ok := c.items[key]
