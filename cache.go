@@ -11,7 +11,7 @@ var ErrNotFound = errors.New("not found")
 
 type LocalCache interface {
 	Set(ctx context.Context, key string, value interface{}, ttl time.Duration) error
-	Get(ctx context.Context, key string, value interface{}) error
+	Get(ctx context.Context, key string) (interface{}, error)
 	Delete(ctx context.Context, key string) error
 	IsNotFoundError(err error) bool
 }
@@ -44,22 +44,17 @@ func (c *memoryCache) Set(_ context.Context, key string, value interface{}, ttl 
 	return nil
 }
 
-func (c *memoryCache) Get(_ context.Context, key string, value interface{}) error {
+func (c *memoryCache) Get(_ context.Context, key string) (interface{}, error) {
 	c.mu.RLock()
 	defer c.mu.RUnlock()
 	item, ok := c.items[key]
 	if !ok {
-		return ErrNotFound
+		return nil, ErrNotFound
 	}
 	if time.Now().After(item.expiresAt) {
-		return ErrNotFound
+		return nil, ErrNotFound
 	}
-	ptr, ok := value.(*interface{})
-	if !ok {
-		return errors.New("value must be a pointer to interface{}")
-	}
-	*ptr = item.value
-	return nil
+	return item.value, nil
 }
 
 func (c *memoryCache) Delete(_ context.Context, key string) error {

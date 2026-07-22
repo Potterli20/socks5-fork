@@ -311,8 +311,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 	src := addr.String()
 	var ch chan byte
 	if s.LimitUDP {
-		var chInterface any
-		err := s.AssociatedUDP.Get(context.Background(), src, &chInterface)
+		chInterface, err := s.AssociatedUDP.Get(context.Background(), src)
 		if err != nil {
 			if s.AssociatedUDP.IsNotFoundError(err) {
 				return fmt.Errorf("This udp address %s is not associated with tcp", src)
@@ -339,8 +338,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 
 	dst := d.Address()
 	var ue *UDPExchange
-	var iue any
-	err := s.UDPExchanges.Get(context.Background(), src+dst, &iue)
+	iue, err := s.UDPExchanges.Get(context.Background(), src+dst)
 	if err == nil {
 		ue = iue.(*UDPExchange)
 		return send(ue, d.Data)
@@ -352,8 +350,7 @@ func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) err
 		log.Printf("Call udp: %#v\n", dst)
 	}
 	var laddr string
-	var laddrInterface any
-	err = s.UDPSrc.Get(context.Background(), src+dst, &laddrInterface)
+	laddrInterface, err := s.UDPSrc.Get(context.Background(), src+dst)
 	if err == nil {
 		laddr = laddrInterface.(string)
 	} else if !s.UDPSrc.IsNotFoundError(err) {
