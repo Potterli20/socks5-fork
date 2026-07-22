@@ -11,20 +11,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Potterli20/golem/pkg/logger"
-	"github.com/Potterli20/golem/pkg/metrics"
-	"github.com/Potterli20/golem/pkg/zcache"
 	"github.com/txthinking/runnergroup"
 )
 
 var (
-	// ErrUnsupportCmd is the error when got unsupport command
 	ErrUnsupportCmd = errors.New("Unsupport Command")
-	// ErrUserPassAuth is the error when got invalid username or password
 	ErrUserPassAuth = errors.New("Invalid Username or Password for Auth")
 )
 
-// Server is socks5 server wrapper
 type Server struct {
 	UserName          string
 	Password          string
@@ -33,24 +27,21 @@ type Server struct {
 	Addr              string
 	ServerAddr        net.Addr
 	UDPConn           *net.UDPConn
-	UDPExchanges      zcache.LocalCache
+	UDPExchanges      LocalCache
 	TCPTimeout        int
 	UDPTimeout        int
 	Handle            Handler
-	AssociatedUDP     zcache.LocalCache
-	UDPSrc            zcache.LocalCache
+	AssociatedUDP     LocalCache
+	UDPSrc            LocalCache
 	RunnerGroup       *runnergroup.RunnerGroup
-	// RFC: [UDP ASSOCIATE] The server MAY use this information to limit access to the association. Default false, no limit.
-	LimitUDP bool
+	LimitUDP          bool
 }
 
-// UDPExchange used to store client address and remote connection
 type UDPExchange struct {
 	ClientAddr *net.UDPAddr
 	RemoteConn net.Conn
 }
 
-// NewClassicServer return a server which allow none method
 func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeout int) (*Server, error) {
 	_, p, err := net.SplitHostPort(addr)
 	if err != nil {
@@ -65,33 +56,9 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 		m = MethodUsernamePassword
 	}
 
-	// 创建一个空的 metrics server
-	ms := metrics.NewTaskMetrics("", "", "socks5")
-
-	// 创建本地缓存配置
-	localConfig := &zcache.LocalConfig{
-		NumCounters:  1e7, // 跟踪的键数量
-		MaxCostMB:    512, // 最大内存使用量
-		BufferItems:  64,  // Get 缓冲区大小
-		MetricServer: ms,  // 必需的 metrics server
-		Logger:       logger.NewLogger(),
-	}
-
-	// 初始化三个本地缓存实例
-	cs, err := zcache.NewLocalCache(localConfig)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create UDPExchanges cache: %v", err)
-	}
-
-	cs1, err := zcache.NewLocalCache(localConfig)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create AssociatedUDP cache: %v", err)
-	}
-
-	cs2, err := zcache.NewLocalCache(localConfig)
-	if err != nil {
-		return nil, fmt.Errorf("failed to create UDPSrc cache: %v", err)
-	}
+	cs := NewLocalCache()
+	cs1 := NewLocalCache()
+	cs2 := NewLocalCache()
 
 	s := &Server{
 		Method:            m,
@@ -110,9 +77,6 @@ func NewClassicServer(addr, ip, username, password string, tcpTimeout, udpTimeou
 	return s, nil
 }
 
-// Negotiate handle negotiate packet.
-// This method do not handle gssapi(0x01) method now.
-// Error or OK both replied.
 func (s *Server) Negotiate(rw io.ReadWriter) error {
 	rq, err := NewNegotiationRequestFrom(rw)
 	if err != nil {
@@ -156,8 +120,6 @@ func (s *Server) Negotiate(rw io.ReadWriter) error {
 	return nil
 }
 
-// GetRequest get request packet from client, and check command according to SupportedCommands
-// Error replied.
 func (s *Server) GetRequest(rw io.ReadWriter) (*Request, error) {
 	r, err := NewRequestFrom(rw)
 	if err != nil {
@@ -185,7 +147,6 @@ func (s *Server) GetRequest(rw io.ReadWriter) (*Request, error) {
 	return r, nil
 }
 
-// Run server
 func (s *Server) ListenAndServe(h Handler) error {
 	if h == nil {
 		s.Handle = &DefaultHandle{}
@@ -272,23 +233,18 @@ func (s *Server) ListenAndServe(h Handler) error {
 	return s.RunnerGroup.Wait()
 }
 
-// Stop server
 func (s *Server) Shutdown() error {
 	return s.RunnerGroup.Done()
 }
 
-// Handler handle tcp, udp request
 type Handler interface {
-	// Request has not been replied yet
 	TCPHandle(*Server, *net.TCPConn, *Request) error
 	UDPHandle(*Server, *net.UDPAddr, *Datagram) error
 }
 
-// DefaultHandle implements Handler interface
 type DefaultHandle struct {
 }
 
-// TCPHandle auto handle request. You may prefer to do yourself.
 func (h *DefaultHandle) TCPHandle(s *Server, c *net.TCPConn, r *Request) error {
 	if r.Cmd == CmdConnect {
 		rc, err := r.Connect(c)
@@ -351,7 +307,6 @@ func (h *DefaultHandle) TCPHandle(s *Server, c *net.TCPConn, r *Request) error {
 	return ErrUnsupportCmd
 }
 
-// UDPHandle auto handle packet. You may prefer to do yourself.
 func (h *DefaultHandle) UDPHandle(s *Server, addr *net.UDPAddr, d *Datagram) error {
 	src := addr.String()
 	var ch chan byte
