@@ -2,10 +2,10 @@ github.com/Potterli20/golem v0.0.0-20260818182020-c9131fdd26ae h1:Sf+zWhhhmQpr6Q
 github.com/Potterli20/golem v0.0.0-20260818182020-c9131fdd26ae/go.mod h1:xPae72CwBD30wydbSBFZjueDU3kXmW5xJ6It4FEDR98=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
-github.com/miekg/dns v1.1.73-0.20260709071206-24ce5ef35470 h1:wuwG/RvVtadj3fBA/yq0oyc3o/YjNPBqZva+G2TqETs=
-github.com/miekg/dns v1.1.73-0.20260709071206-24ce5ef35470/go.mod h1:PfzHdk8TaHFUb7/7M3LqWdmyLCyboMBECtLPEPrPykY=
 github.com/miekg/dns v1.1.73-0.20260818181511-000bd62913f2 h1:DGdEj7xfU3qBjjebPz3Xv1Hk4aZXSw4dlvBhB6RC+OE=
 github.com/miekg/dns v1.1.73-0.20260818181511-000bd62913f2/go.mod h1:/Hedy23wa3/i1HCCp9TWDlbbsRQDf8wncQn/74HpVW4=
+github.com/miekg/dns v1.1.73-0.20260818194733-76c682a2649f h1:CMIn4y7BLDyAM+l+wyf58u06YZDIb2HBajLh9fnJdts=
+github.com/miekg/dns v1.1.73-0.20260818194733-76c682a2649f/go.mod h1:/Hedy23wa3/i1HCCp9TWDlbbsRQDf8wncQn/74HpVW4=
 github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae h1:ArVM1jICfm7g4E4dBet+KHUFMLuxmj1Nxdp/tr3ByCU=
 github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae/go.mod h1:cldYm15/XHcGt7ndItnEWHwFZo7dinU+2QoyjfErhsI=
 golang.org/x/mod v0.38.0 h1:MECBjubtXD7yj4HrhIUcywNaGeNVUdfVnxmPajOk4yk=
