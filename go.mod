@@ -10,7 +10,7 @@ require (
 )
 
 require (
-	github.com/Potterli20/golem v0.0.0-20260818003509-dd42fb7d46d2 // indirect
+	github.com/Potterli20/golem v0.0.0-20260818062313-9b75db49c458 // indirect
 	golang.org/x/mod v0.38.0 // indirect
 	golang.org/x/net v0.58.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
