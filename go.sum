@@ -1,9 +1,11 @@
-github.com/Potterli20/golem v0.0.0-20260901104235-5f0f580b5856 h1:p9RcbEp//aBIT1mv654M0p3gvFBMBtw8ePY/USWwrtU=
-github.com/Potterli20/golem v0.0.0-20260901104235-5f0f580b5856/go.mod h1:g6RcMDK4rx4vPlyd1BFyqQJPOfbTN7crsFeFZ+KEtnU=
+github.com/Potterli20/golem v0.0.0-20260901154340-711b387faad0 h1:e5muiSMKV5/nfn4LsDo5Wn8STD4hlXsySTqQAj22CbY=
+github.com/Potterli20/golem v0.0.0-20260901154340-711b387faad0/go.mod h1:g6RcMDK4rx4vPlyd1BFyqQJPOfbTN7crsFeFZ+KEtnU=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 github.com/miekg/dns v1.1.73 h1:uhT8nJxmTrPJYClxVxTCX+CVn6qnzSiybRk72Z6DgrE=
 github.com/miekg/dns v1.1.73/go.mod h1:RW2Obtfd5NZHvOFe3zYG0W8koWOQtAzyHaLo8vASBuQ=
+github.com/miekg/dns v1.1.74-0.20260901173534-2e4905fb0302 h1:zpLxUXjhiqkQc//niMGHWBgat3zd2EPaKJ1aVBhd4qw=
+github.com/miekg/dns v1.1.74-0.20260901173534-2e4905fb0302/go.mod h1:YVxs4ZFBJDL6ZDgjMrKn9NqEdZm5TAbWoFeZ8IzbNVo=
 github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae h1:ArVM1jICfm7g4E4dBet+KHUFMLuxmj1Nxdp/tr3ByCU=
 github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae/go.mod h1:cldYm15/XHcGt7ndItnEWHwFZo7dinU+2QoyjfErhsI=
 golang.org/x/mod v0.38.0 h1:MECBjubtXD7yj4HrhIUcywNaGeNVUdfVnxmPajOk4yk=

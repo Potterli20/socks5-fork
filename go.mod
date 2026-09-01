@@ -5,12 +5,12 @@ go 1.25.8
 tool golang.org/x/tools/cmd/stringer
 
 require (
-	github.com/miekg/dns v1.1.73
+	github.com/miekg/dns v1.1.74-0.20260901173534-2e4905fb0302
 	github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae
 )
 
 require (
-	github.com/Potterli20/golem v0.0.0-20260901104235-5f0f580b5856 // indirect
+	github.com/Potterli20/golem v0.0.0-20260901154340-711b387faad0 // indirect
 	golang.org/x/mod v0.38.0 // indirect
 	golang.org/x/net v0.58.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
