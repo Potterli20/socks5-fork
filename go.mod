@@ -1,6 +1,6 @@
 module github.com/Potterli20/socks5-fork
 
-go 1.25.8
+go 1.26.0
 
 tool golang.org/x/tools/cmd/stringer
 
@@ -10,7 +10,7 @@ require (
 )
 
 require (
-	github.com/Potterli20/golem v0.0.0-20260901154340-711b387faad0 // indirect
+	github.com/Potterli20/golem v0.0.0-20260902015112-a97d76098452 // indirect
 	golang.org/x/mod v0.38.0 // indirect
 	golang.org/x/net v0.58.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
