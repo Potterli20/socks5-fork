@@ -1,5 +1,5 @@
-github.com/Potterli20/golem v0.0.0-20260918152305-6586724dc495 h1:wEEov3eJc2mtpI1ure5spoSPb4dSrUvGIUFvNC/UaRI=
-github.com/Potterli20/golem v0.0.0-20260918152305-6586724dc495/go.mod h1:DljPix0WOs2NxefpC20qIBu2BEgISWF4kHpLTVYjcbA=
+github.com/Potterli20/golem v0.0.0-20260918200737-ca2bbd13b335 h1:FVX71RLsUFfQ9vl9FoZSdMIehxeIC6YuQQzH4AnCeJQ=
+github.com/Potterli20/golem v0.0.0-20260918200737-ca2bbd13b335/go.mod h1:KS/KsQGJK8KvvJK39wFktjuCOU6Lf92XH3XT/NFNmvw=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 github.com/miekg/dns v1.1.74-0.20260901173534-2e4905fb0302 h1:zpLxUXjhiqkQc//niMGHWBgat3zd2EPaKJ1aVBhd4qw=
