@@ -1,5 +1,5 @@
-github.com/Potterli20/golem v0.0.0-20260925160536-390556a2efa1 h1:XRTwYGWnoRJUcMcU/cf9wGD0U0rbEVl3CWvErh3ID/k=
-github.com/Potterli20/golem v0.0.0-20260925160536-390556a2efa1/go.mod h1:cR8U7RXla6F+h5THNnJ/23VKaJQCSJheCwpbtcrBm7k=
+github.com/Potterli20/golem v0.0.0-20260925205042-a7c8bfc28963 h1:siZQPwryJbFlh+nKOfBcTXpQlA95mYokvNmSWtHuzDc=
+github.com/Potterli20/golem v0.0.0-20260925205042-a7c8bfc28963/go.mod h1:Ej66EIQIYmdWvdY5L4qlCghHfqmhXX0rsNCMGMyFEkU=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 github.com/miekg/dns v1.1.74-0.20260901173534-2e4905fb0302 h1:zpLxUXjhiqkQc//niMGHWBgat3zd2EPaKJ1aVBhd4qw=
@@ -16,3 +16,5 @@ golang.org/x/sys v0.48.0 h1:bbX/i/6MgT9BVLM9RT1thmxL04yeTAhbEz4SyadbXoo=
 golang.org/x/sys v0.48.0/go.mod h1:hNLxWAXmnKAxqDtdwIYC4bM9oQPEecfsnNMuSxOs3og=
 golang.org/x/tools v0.49.0 h1:3NI7VXzL9+1WZD52Dx2ttoPwD5DWrFGpl9mFZDlmisI=
 golang.org/x/tools v0.49.0/go.mod h1:SJNXV9DBKT0UbdttsQjbfJlAE/q+y36++zo3uL3N0Oo=
+golang.org/x/tools v0.50.0 h1:c2ifzfcuY7L90lZ2aKd8S4K2NpASF08SZx9ZuJkHmSU=
+golang.org/x/tools v0.50.0/go.mod h1:7ulVMw3831Mwi5EZD6RomGyffr4VFjuNYXf2BbCEAV0=
