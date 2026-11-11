@@ -1,5 +1,5 @@
-github.com/Potterli20/golem v0.0.0-20261110135508-1679818f0a8c h1:j5jrFEs2aqBLrv78k8bK1H+BQN/yTvfHBihqT8Epw5U=
-github.com/Potterli20/golem v0.0.0-20261110135508-1679818f0a8c/go.mod h1:FpZWidcbghezEf7Bw74kjEOqFWJXAT+VXwTHCB2nHKM=
+github.com/Potterli20/golem v0.0.0-20261110223817-c2ff7999220a h1:z2YkxuvoYFC1vy4+xSusJxYytmZ/RuUok86Z2OyXmXs=
+github.com/Potterli20/golem v0.0.0-20261110223817-c2ff7999220a/go.mod h1:iDzprHZcZVI7GMTQ6e8dAzr8aPW26l3ElbDULAy0Wyg=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 github.com/miekg/dns v1.1.74-0.20261103100211-b2d6c9f4480a h1:j0Qm3rvV7i9UKtU7BTiUU6ApuZBW6XnS+n8GDAunmvk=
@@ -8,6 +8,8 @@ github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae h1:ArVM1jIC
 github.com/txthinking/runnergroup v0.0.0-20250224021307-5864ffeb65ae/go.mod h1:cldYm15/XHcGt7ndItnEWHwFZo7dinU+2QoyjfErhsI=
 golang.org/x/mod v0.42.0 h1:ICeL3t2L30ljSPHHxDnR4fqVcBt/zR2zJAb9juavmQg=
 golang.org/x/mod v0.42.0/go.mod h1:u5fzIrRInkL8MaO1cbRkUHT64v303YIT5KEqpNr7jRs=
+golang.org/x/mod v0.43.0 h1:MFuq5J6s35W9D3IjkwyWc9vHh0nENOrt5K8Iof4ofmg=
+golang.org/x/mod v0.43.0/go.mod h1:4ec1JnuyBz5+FIVhg86UsA39YG8BpnrZdJYSNHmGzHY=
 golang.org/x/net v0.62.0 h1:18ELalfM5+XNRwzM2nYqXsZQ9ByS1uhj2O/U7+5jqRY=
 golang.org/x/net v0.62.0/go.mod h1:WgDCOTH8iwtB66T4/GfI94AHo/hhdb7Hah9NDseQfiI=
 golang.org/x/sync v0.25.0 h1:dJnifr0nMV8/SBnBvdo4eSGGnrc3O4FFx6IqvtLcmRs=
